@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result - Student Grade Predictor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f0f2f5;
+            color: #1a1a2e;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: white;
+            padding: 1.5rem 2rem;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+        .container {
+            max-width: 700px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            flex: 1;
+        }
+        .result-card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            overflow: hidden;
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+        .result-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #888;
+            font-weight: 500;
+        }
+        .result-score {
+            font-size: 5rem;
+            font-weight: 800;
+            margin: 0.5rem 0;
+            background: linear-gradient(135deg, #e94560, #0f3460);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.1;
+        }
+        .result-grade {
+            display: inline-block;
+            padding: 0.4rem 1.5rem;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+        .grade-A { background: #d4edda; color: #155724; }
+        .grade-B { background: #cce5ff; color: #004085; }
+        .grade-C { background: #fff3cd; color: #856404; }
+        .grade-D { background: #f8d7da; color: #721c24; }
+        .grade-F { background: #f8d7da; color: #721c24; }
+
+        .interpretation {
+            margin: 1.5rem 0;
+            padding: 1.25rem;
+            background: #f8f9fa;
+            border-radius: 12px;
+            text-align: left;
+        }
+        .interpretation h3 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        .interpretation ul {
+            list-style: none;
+            padding: 0;
+        }
+        .interpretation ul li {
+            padding: 0.3rem 0;
+            font-size: 0.9rem;
+            color: #555;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .btn {
+            padding: 0.8rem 2rem;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #e94560, #c23152);
+            color: white;
+            border: none;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(233,69,96,0.3);
+        }
+        .btn-secondary {
+            background: #f0f2f5;
+            color: #333;
+            border: 1.5px solid #ddd;
+        }
+        .btn-secondary:hover {
+            background: #e4e6e9;
+            transform: translateY(-2px);
+        }
+
+        .error-card {
+            background: #fff5f5;
+            border: 1px solid #f8d7da;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+        }
+        .error-card h2 { color: #721c24; margin-bottom: 0.5rem; }
+        .error-card p { color: #856404; }
+
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            color: #888;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Prediction Result</h1>
+    </div>
+
+    <div class="container">
+        <div class="result-card">
+            {% if error %}
+            <div class="error-card">
+                <h2>Error</h2>
+                <p>{{ error }}</p>
+                <div class="btn-group">
+                    <a href="/" class="btn btn-primary">Try Again</a>
+                </div>
+            </div>
+            {% else %}
+            <div class="result-label">Predicted Final Grade (G3)</div>
+            <div class="result-score">{{ prediction }}</div>
+
+            {% set grade_class = 'grade-C' %}
+            {% if prediction >= 16 %}
+                {% set grade_class = 'grade-A' %}
+            {% elif prediction >= 12 %}
+                {% set grade_class = 'grade-B' %}
+            {% elif prediction >= 8 %}
+                {% set grade_class = 'grade-C' %}
+            {% elif prediction >= 6 %}
+                {% set grade_class = 'grade-D' %}
+            {% else %}
+                {% set grade_class = 'grade-F' %}
+            {% endif %}
+
+            <div class="result-grade {{ grade_class }}">
+                {% if prediction >= 16 %}Excellent Performance
+                {% elif prediction >= 12 %}Good Performance
+                {% elif prediction >= 8 %}Average Performance
+                {% elif prediction >= 6 %}Below Average
+                {% else %}Needs Improvement{% endif %}
+            </div>
+
+            <div class="interpretation">
+                <h3>What This Means</h3>
+                <ul>
+                    <li>&#9679; The predicted grade is on a scale of <strong>0 to 20</strong> (Portuguese grading system)</li>
+                    <li>&#9679; This prediction is based on <strong>Linear Regression</strong> trained on 395 student records</li>
+                    <li>&#9679; The model uses academic, demographic, and lifestyle features to make the prediction</li>
+                    {% if prediction >= 10 %}
+                    <li>&#9679; This student is predicted to <strong>pass</strong> (passing grade is 10)</li>
+                    {% else %}
+                    <li>&#9679; This student is predicted to <strong>struggle</strong> (passing grade is 10) &mdash; additional support may be needed</li>
+                    {% endif %}
+                </ul>
+            </div>
+
+            <div class="btn-group">
+                <a href="/" class="btn btn-primary">&#8592; New Prediction</a>
+                <button class="btn btn-secondary" onclick="window.print()">Print Result</button>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="footer">
+        Student Academic Performance Prediction &mdash; Machine Learning Project
+    </div>
+</body>
+</html>

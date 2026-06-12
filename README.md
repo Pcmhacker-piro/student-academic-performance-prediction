@@ -1,21 +1,21 @@
-# STUDENT-GRADE-ANALYSIS-PREDICTION
+# student-academic-performance-prediction
 
 [![author](https://img.shields.io/badge/author-Prakash-ff69b4.svg?style=flat-square)](https://github.com/Pcmhacker-piro)
 [![GitHub followers](https://img.shields.io/github/followers/Pcmhacker-piro?style=social)](https://github.com/Pcmhacker-piro?tab=followers)
-[![GitHub watchers](https://img.shields.io/github/watchers/Pcmhacker-piro/STUDENT-GRADE-ANALYSIS-PREDICTION?style=social)](https://github.com/Pcmhacker-piro/STUDENT-GRADE-ANALYSIS-PREDICTION/watchers)
-[![GitHub stars](https://img.shields.io/github/stars/Pcmhacker-piro/STUDENT-GRADE-ANALYSIS-PREDICTION?style=social)](https://github.com/Pcmhacker-piro/STUDENT-GRADE-ANALYSIS-PREDICTION/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/Pcmhacker-piro/STUDENT-GRADE-ANALYSIS-PREDICTION?style=social)](https://github.com/Pcmhacker-piro/STUDENT-GRADE-ANALYSIS-PREDICTION/network/members)
+[![GitHub watchers](https://img.shields.io/github/watchers/Pcmhacker-piro/student-academic-performance-prediction?style=social)](https://github.com/Pcmhacker-piro/student-academic-performance-prediction/watchers)
+[![GitHub stars](https://img.shields.io/github/stars/Pcmhacker-piro/student-academic-performance-prediction?style=social)](https://github.com/Pcmhacker-piro/student-academic-performance-prediction/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/Pcmhacker-piro/student-academic-performance-prediction?style=social)](https://github.com/Pcmhacker-piro/student-academic-performance-prediction/network/members)
 
-![GitHub language count](https://img.shields.io/github/languages/count/Pcmhacker-piro/STUDENT-GRADE-ANALYSIS-PREDICTION?style=flat-square)
-![GitHub top language](https://img.shields.io/github/languages/top/Pcmhacker-piro/STUDENT-GRADE-ANALYSIS-PREDICTION?logoColor=9cf&style=flat-square)
-![GitHub repo size](https://img.shields.io/github/repo-size/Pcmhacker-piro/STUDENT-GRADE-ANALYSIS-PREDICTION?logoColor=important&style=flat-square)
+![GitHub language count](https://img.shields.io/github/languages/count/Pcmhacker-piro/student-academic-performance-prediction?style=flat-square)
+![GitHub top language](https://img.shields.io/github/languages/top/Pcmhacker-piro/student-academic-performance-prediction?logoColor=9cf&style=flat-square)
+![GitHub repo size](https://img.shields.io/github/repo-size/Pcmhacker-piro/student-academic-performance-prediction?logoColor=important&style=flat-square)
 
-[![GitHub issues](https://img.shields.io/github/issues/Pcmhacker-piro/STUDENT-GRADE-ANALYSIS-PREDICTION?style=flat-square)](https://github.com/Pcmhacker-piro/STUDENT-GRADE-ANALYSIS-PREDICTION/issues?q=is%3Aopen+is%3Aissue)
-[![GitHub closed issues](https://img.shields.io/github/issues-closed/Pcmhacker-piro/STUDENT-GRADE-ANALYSIS-PREDICTION?style=flat-square)](https://github.com/Pcmhacker-piro/STUDENT-GRADE-ANALYSIS-PREDICTION/issues?q=is%3Aissue+is%3Aclosed)
-[![GitHub pull requests](https://img.shields.io/github/issues-pr/Pcmhacker-piro/STUDENT-GRADE-ANALYSIS-PREDICTION?logoColor=yellow&style=flat-square)](https://github.com/Pcmhacker-piro/STUDENT-GRADE-ANALYSIS-PREDICTION/pulls?q=is%3Aopen+is%3Apr)
-[![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/Pcmhacker-piro/STUDENT-GRADE-ANALYSIS-PREDICTION?logoColor=yellow&style=flat-square)](https://github.com/Pcmhacker-piro/STUDENT-GRADE-ANALYSIS-PREDICTION/pulls?q=is%3Apr+is%3Aclosed)
-[![LICENSE](https://img.shields.io/dub/l/vibe-d.svg?style=flat-square)](https://github.com/Pcmhacker-piro/STUDENT-GRADE-ANALYSIS-PREDICTION/blob/master/LICENSE)
-[![HitCount](http://hits.dwyl.com/Pcmhacker-piro/STUDENT-GRADE-ANALYSIS-PREDICTION.svg)](http://hits.dwyl.com/Pcmhacker-piro/STUDENT-GRADE-ANALYSIS-PREDICTION)
+[![GitHub issues](https://img.shields.io/github/issues/Pcmhacker-piro/student-academic-performance-prediction?style=flat-square)](https://github.com/Pcmhacker-piro/student-academic-performance-prediction/issues?q=is%3Aopen+is%3Aissue)
+[![GitHub closed issues](https://img.shields.io/github/issues-closed/Pcmhacker-piro/student-academic-performance-prediction?style=flat-square)](https://github.com/Pcmhacker-piro/student-academic-performance-prediction/issues?q=is%3Aissue+is%3Aclosed)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/Pcmhacker-piro/student-academic-performance-prediction?logoColor=yellow&style=flat-square)](https://github.com/Pcmhacker-piro/student-academic-performance-prediction/pulls?q=is%3Aopen+is%3Apr)
+[![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/Pcmhacker-piro/student-academic-performance-prediction?logoColor=yellow&style=flat-square)](https://github.com/Pcmhacker-piro/student-academic-performance-prediction/pulls?q=is%3Apr+is%3Aclosed)
+[![LICENSE](https://img.shields.io/dub/l/vibe-d.svg?style=flat-square)](https://github.com/Pcmhacker-piro/student-academic-performance-prediction/blob/master/LICENSE)
+[![HitCount](http://hits.dwyl.com/Pcmhacker-piro/student-academic-performance-prediction.svg)](http://hits.dwyl.com/Pcmhacker-piro/student-academic-performance-prediction)
 
 ### Objective
 Prediction of the final grade of Portugese high school students
